@@ -1,0 +1,37 @@
+<!DOCTYPE html>0
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regex Object Properties and Methods Demo</title>
+</head>
+<body>
+  <h1>Regex Demo</h1>
+  <p id="output"></p>
+  <script>
+    // Define regex to find all capitalized words
+    const regex = /\b[A-Z][a-z]*\b/g;
+    const text = "Hello there! My name is ChatGPT. I Love JavaScript.";
+    const output = document.getElementById("output");
+    // Prepare output lines
+    let result = [];
+    // source property
+    result.push(`Pattern source: ${regex.source}`);
+    // flags property
+    result.push(`Flags: ${regex.flags}`);
+    // test() method
+    const hasCapitalWords = regex.test(text);
+    result.push(`Contains capitalized words? ${hasCapitalWords}`);
+    // exec() method in a loop to get all matches
+    let match;
+    regex.lastIndex = 0; // reset lastIndex before using exec loop
+    while ((match = regex.exec(text)) !== null) {
+      result.push(`Found '${match[0]}' at index ${match.index}`);
+    }
+    // lastIndex property after matching
+    result.push(`Last index after matching: ${regex.lastIndex}`);
+    // Display results in the page
+    output.innerHTML = result.join("<br>");
+  </script>
+</body>
+</html>

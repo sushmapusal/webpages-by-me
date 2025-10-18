@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Print 1 to 10 Using Loops</title>
+<style>
+body {
+font-family: Arial;
+text-align: center;
+margin-top: 30px;
+}
+button {
+margin: 10px;
+padding: 10px 20px;
+font-size: 16px;
+}
+#output {
+margin-top: 20px;
+}
+</style>
+<script>
+function useWhileLoop() {
+let number = 1;
+let output = "";
+while (number <= 10) {
+alert(number);
+output += "<h2>" + number + "</h2>";
+number++;
+}
+document.getElementById("output").innerHTML = output;
+}
+function useDoWhileLoop() {
+let number = 1;
+let output = "";
+do {
+alert(number);
+output += "<h2>" + number + "</h2>";
+number++;
+} while (number <= 10);
+document.getElementById("output").innerHTML = output;
+}
+function useForLoop() {
+let output = "";
+for (let number = 1; number <= 10; number++) {
+alert(number);
+output += "<h2>" + number + "</h2>";
+}
+document.getElementById("output").innerHTML = output;
+}
+</script>
+</head>
+<body>
+<h1>Print Numbers from 1 to 10</h1>
+<button onclick="useWhileLoop()">Use While Loop</button>
+<button onclick="useDoWhileLoop()">Use Do...While Loop</button>
+<button onclick="useForLoop()">Use For Loop</button>
+<div id="output"></div>
+</body>
+</html>

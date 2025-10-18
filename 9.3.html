@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us Page</title>
+  <script type="text/javascript">
+    // Validation for fields
+    function validation() {
+      var nm = document.getElementById("name_id").value.trim();
+      var em = document.getElementById("email_id").value.trim();
+      var pw = document.getElementById("password_id").value.trim();
+      var ph = document.getElementById("phone_id").value.trim();
+      // Check all fields
+      if (nm === "" || em === "" || pw === "" || ph === "") {
+        alert("Please fill all fields.");
+        return false;
+      }
+      // Name validation
+      if (nm.length < 4) {
+        alert("Name must be at least 4 characters long.");
+        return false;
+      }
+      // Email validation
+      var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(em)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+      // Password validation
+      if (pw.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+      // Phone number validation
+      var phonePattern = /^[0-9]{10}$/;
+      if (!phonePattern.test(ph)) {
+        alert("Phone number must be 10 digits only.");
+        return false;
+      }
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form action="login_app.php" method="POST" onsubmit="return validation();">
+    <table align="center" cellpadding="8" border="0">
+      <tr>
+        <td colspan="2" align="center"><h2>Contact Us</h2></td>
+      </tr>
+      <tr>
+        <td><label for="name_id">Name:</label></td>
+        <td><input type="text" name="name" id="name_id" /></td>
+      </tr>
+      <tr>
+        <td><label for="email_id">Email:</label></td>
+        <td><input type="text" name="email" id="email_id" /></td>
+      </tr>
+      <tr>
+        <td><label for="password_id">Password:</label></td>
+        <td><input type="password" name="password" id="password_id" /></td>
+      </tr>
+      <tr>
+        <td><label for="phone_id">Phone:</label></td>
+        <td><input type="text" name="phone" id="phone_id" /></td>
+      </tr>
+       <tr>
+          <td><label for="message_id">message:</label></td>
+        <td><input type="text" name="message" id="message_id" /></td>
+       </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" value="SUBMIT" />
+          <input type="reset" value="CLEAR" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

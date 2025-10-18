@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math Object Example</title>
+</head>
+<body>
+	<h2>Math Object Example</h2>
+	<p id="output"></p>
+	<script>
+		//Math Object Properties
+		let pivalue = Math.PI;               // Value of pi
+		let evalue = Math.E;                 // Value of Euler's Formula
+		let sqrt2value = Math.SQRT2;         // Square root of 2
+		// Math Object Methods
+		let sqrtresult = Math.sqrt(16);      // Square root
+		let powerresult = Math.pow(2,5);   // 2^5
+		let absresult = Math.abs(-25);      // Absolute Value
+		let roundresult = Math.round(4.7);      // Round to nearest integer
+		let ceilresult = Math.ceil(4.2);      // Round up
+		let floorresult = Math.floor(4.8);      // Round down
+		let randomresult = Math.random();      // Random Number between 0 and 1
+		let maxresult = Math.max(3,9,2,15,7);      // Maximum
+		let minresult = Math.min(3,9,2,15,7);      // Minimum
+		// Display Results
+		document.getElementById("output").innerHTML=
+			"<b>Properties:</b><br>"+
+			"PI: " + pivalue + "<br>" +
+			"E: " + evalue + "<br>" +
+			"SQRT2: " + sqrt2value + "<br><br>" +
+                                      "<b>Methods:</b><br>"+
+			"Square Root of 16: " + sqrtresult + "<br>" +
+			"2^5 (Power): " + powerresult + "<br>" +
+			"Absolute of -25: " + absresult + "<br>" +
+			"Round(4.7): " + roundresult + "<br>" +
+			"Ceil(4.2): " + ceilresult + "<br>" +
+			"Floor(4.8): " + floorresult + "<br>" +
+			"Random Number (0-1): " + randomresult + "<br>" +
+			"Max(3,9,2,15,7): " + maxresult + "<br>" +
+			"Min(3,9,2,15,7): " + minresult;
+	</script>
+</body>
+</html>

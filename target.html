@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>thumbnail Image gallery</title>
+<style>
+body{
+front-family: arial , san-serif;
+test-align: center;
+}
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content: center;
+gap: 15px;
+margin-top:20px;
+}
+.gallery a img{
+ width :100px;
+ height:100px;
+ object-fit:fit:co#ccc;
+ border:2px solid#cc;
+ border-radius:8px;
+ transition:transform 0.3s;
+}
+gallery a img:hover{
+transform: scale(1.1);
+border-color: #666;
+}
+</style>
+</head>
+<body>
+<h1>My Image Gallery</h1>
+<p>Click on a thumbnail to view the full-sized image</p>
+<div class="gallery">
+<a href="C:\Users\Sushma\OneDrive\Desktop\1.jpg"target="_blank">
+   <img src="C:\Users\Sushma\OneDrive\Desktop\1.jpg" alt="MY profile "width="150" height="150">
+</a>
+<a href="C:\Users\Sushma\OneDrive\Desktop\2.jpg"target="_blank">
+   <img src="C:\Users\Sushma\OneDrive\Desktop\2.jpg" alt="MY profile "width="150" height="150">
+</a>
+<a href="C:\Users\Sushma\OneDrive\Desktop\3.jpg"target="_blank">
+   <img src="C:\Users\Sushma\OneDrive\Desktop\3.jpg" alt="MY profile "width="150" height="150">
+</a>
+<a href="C:\Users\Sushma\OneDrive\Desktop\4.jpg"target="_blank">
+   <img src="C:\Users\Sushma\OneDrive\Desktop\4.jpg" alt="MY profile "width="150" height="150">
+</a>
+</div>
+</body>
+</html>

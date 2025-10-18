@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attribute Selectors Demo</title>
+  <style>
+    /* Targets all input elements with type="text" */
+    input[type="text"] {
+      border: 2px solid #4CAF50;
+      padding: 5px;
+    }
+
+    /* Targets links that open in a new tab */
+    a[target="_blank"] {
+      color: crimson;
+      text-decoration: underline;
+    }
+
+    /* Targets images with alt attribute */
+    img[alt] {
+      border: 2px dashed #2196F3;
+    }
+
+    /* Targets elements with a data-role attribute */
+    div[data-role="admin"] {
+      background-color: #f9f9f9;
+      border-left: 5px solid orange;
+      padding: 10px;
+    }
+
+    /* Partial match: href contains "example" */
+    a[href*="example"] {
+      font-weight: bold;
+    }
+
+    /* Starts with: class begins with "btn-" */
+    button[class^="btn-"] {
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    /* Ends with: src ends with ".jpg" */
+    img[src$=".jpg"] {
+      box-shadow: 0 0 5px #888;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" placeholder="Enter your name">
+  <a href="https://example.com" target="_blank">Visit Example</a>
+  <img src="photo.jpg" alt="Sample Image">
+  <div data-role="admin">Admin Panel</div>
+  <button class="btn-primary">Click Me</button>
+
+</body>
+</html>

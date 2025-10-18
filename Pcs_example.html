@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo class selectors example</title>
+    <style>
+          /* links */
+          a:link{
+            color:blue;
+                }
+          a:visited{
+           color:purple;
+                   }
+          a.hover{
+            color:red;
+                 }
+          a:active{
+            color:green;
+                   }
+        /* Input focus */
+        input:focus{
+border:2px solid orange;
+background-color:#f9f2d0;
+}
+/* list styling */
+ul li:first-child {
+color:crimson;
+}
+ul li:last-child {
+color:teal;
+}
+ul li:nth-child(2) {
+color:darkorange;
+}
+/* checkbox */
+input:checed+label
+color:dargreen;
+ront-weigt:bold;
+}
+</style>
+</head>
+<body>
+<h2>pseudo-class selector demo</h2>
+<p><a href="#">this is a link</a></p>
+<p><input type="text" placeholder="click here to see:focus effect"></p>
+<ul>
+<li>first item</li>
+<li>second item</li>
+<li>third item</li>
+</ul>
+<p>
+<input type="checkbox" id="check1">
+<label for="check1">i agree</label>
+</p>
+</body>
+</html>
+
